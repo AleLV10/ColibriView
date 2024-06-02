@@ -52,3 +52,73 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const btnMediaFidelidad = document.getElementById("btnMediaFidelidad");
+    const mediaFidelidadSection = document.getElementById("mediaFidelidadSection");
+    const btnVersion1 = document.getElementById("btnVersion1");
+    const version1Section = document.getElementById("version1Section");
+    const btnVersion2 = document.getElementById("btnVersion2");
+    const version2Section = document.getElementById("version2Section");
+    const btnVersion3 = document.getElementById("btnVersion3");
+    const version3Section = document.getElementById("version3Section");
+
+    btnMediaFidelidad.addEventListener("click", function() {
+        // Mostrar la sección del prototipo de media fidelidad
+        mediaFidelidadSection.classList.toggle("show");
+        // Ocultar la sección de la versión 1.0 si está visible
+        if (version1Section.classList.contains("show")) {
+            version1Section.classList.remove("show");
+        }
+        if (version2Section.classList.contains("show")) {
+            version2Section.classList.remove("show");
+        }
+        if (version3Section.classList.contains("show")) {
+            version3Section.classList.remove("show");
+        }
+    });
+
+    btnVersion1.addEventListener("click", function() {
+        // Mostrar la sección de la versión 1.0
+        version1Section.classList.toggle("show");
+        // Ocultar la sección del prototipo de media fidelidad si está visible
+        if (mediaFidelidadSection.classList.contains("show")) {
+            mediaFidelidadSection.classList.remove("show");
+        }
+        if (version2Section.classList.contains("show")) {
+            version2Section.classList.remove("show");
+        }
+        if (version3Section.classList.contains("show")) {
+            version3Section.classList.remove("show");
+        }
+    });
+
+    btnVersion2.addEventListener("click", function() {
+        // Mostrar la sección de la versión 2.0
+        version2Section.classList.toggle("show");
+        // Ocultar la sección del prototipo de media fidelidad si está visible
+        if (mediaFidelidadSection.classList.contains("show")) {
+            mediaFidelidadSection.classList.remove("show");
+        }
+        if (version1Section.classList.contains("show")) {
+            version1Section.classList.remove("show");
+        }
+        if (version3Section.classList.contains("show")) {
+            version3Section.classList.remove("show");
+        }
+    });
+    btnVersion3.addEventListener("click", function() {
+        // Mostrar la sección de la versión 2.0
+        version3Section.classList.toggle("show");
+        // Ocultar la sección del prototipo de media fidelidad si está visible
+        if (mediaFidelidadSection.classList.contains("show")) {
+            mediaFidelidadSection.classList.remove("show");
+        }
+        if (version1Section.classList.contains("show")) {
+            version1Section.classList.remove("show");
+        }
+        if (version2Section.classList.contains("show")) {
+            version2Section.classList.remove("show");
+        }
+    });
+});
